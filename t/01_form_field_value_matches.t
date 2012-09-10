@@ -21,9 +21,14 @@ $mech->form_field_value_matches('Name', 'Wild Joe', 'testform', 'field: Name mat
 
 $mech->form_field_value_matches('Age', '1 1/2', 'testform', 'field: Age matched');
 
-#$mech->form_select_field_matches('FavoriteFood', 'bananas', 'testform', 'field: FavoriteFood matched');
+$mech->form_select_field_matches('FavoriteFood', 'bananas', 'testform', 'field: FavoriteFood matched');
 
-$mech->form_select_field_matches({ field_name => 'FavoriteFood', selected => 'bananas', form_name => 'testform' }, 'field: FavoriteFood matched');
+$mech->form_select_field_matches({ field_name => 'FavoriteFood', selected => 'bananas', form_name => 'testform' }, 'field: FavoriteFood matched (alt syntax)');
+
+$mech->form_checkbox_field_matches('CanWalk', undef, 'testform', 'field: CanWalk matched (not checked)');
+
+$mech->form_checkbox_field_matches('CanRideBike', 'yes', 'testform', 'field: CanRideBike matched (checked)');
+
 
 
 
