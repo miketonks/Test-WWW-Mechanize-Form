@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 4;
+use Test::More tests => 8;
 
 use Test::WWW::Mechanize;
 use Test::WWW::Mechanize::Form;
@@ -13,7 +13,7 @@ use URI::file;
 my $mech = Test::WWW::Mechanize->new( autocheck => 0 );
 isa_ok($mech,'Test::WWW::Mechanize');
 
-my $form_url = URI::file->new_abs( '../t/01_test_form_filled.html' )->as_string;
+my $form_url = URI::file->new_abs( 't/01_test_form_filled.html' )->as_string;
 
 $mech->get_ok($form_url);
 

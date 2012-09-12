@@ -3,6 +3,8 @@ package Test::WWW::Mechanize::Form;
 
 use strict;
 
+our $VERSION = '0.1';
+
 =head1 NAME
 
 Test::WWW::Mechanize::Form - extensions to Test::WWW:Mechanize using additional methods from HTML Form 
